@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab.page.scss'],
 })
 export class TabPage implements OnInit {
-  distancia:number=100;
+  distancia:number=0;
   tiempo:number;
   constructor() { }
   calcular(velocidad:number){
