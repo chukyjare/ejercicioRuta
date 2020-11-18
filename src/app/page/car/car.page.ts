@@ -6,15 +6,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './car.page.html',
   styleUrls: ['./car.page.scss'],
 })
-export class CarPage extends TabPage implements OnInit {
+export class CarPage implements OnInit {
   velocidad:number=30;
-  
-  constructor() {
-    super();
+  miDistancia:number;
+  miTiempo:number;
+  constructor(public tabPage:TabPage) {
 
    }
-
+   calcular(velocidad:number){
+    this.miTiempo=(this.miDistancia/velocidad)*60;
+}
   ngOnInit() {
+    this.miDistancia=this.tabPage.distancia;
   }
 
 }

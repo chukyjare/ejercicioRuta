@@ -7,8 +7,8 @@
 
 <ion-content>
   <ion-item>
-      <ion-label>Distancia andando:</ion-label>
-      <ion-input [ngModel]="distancia"></ion-input>
+      <ion-label slot="start">Distancia andando:</ion-label>
+      <ion-label>{{miDistancia}}</ion-label>
       <ion-label>Km</ion-label>
       <ion-item color="primary" slot="end">
         <ion-icon name="walk-outline"></ion-icon>
@@ -17,7 +17,7 @@
   
     <ion-item>
       <ion-label>Tiempo:</ion-label>
-      <ion-label>{{tiempo}}</ion-label>
+      <ion-label>{{miTiempo}}</ion-label>
       <ion-label color="danger" slot="end">MIN</ion-label>
     </ion-item>
     <ion-button expand="full" (click)="calcular(velocidad)" color="danger">Calcular</ion-button>
