@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>En avión</ion-title>
+    <ion-item color="danger" slot="end">.</ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Distancia en avión:</ion-label>
+    <ion-input [ngModel]="distancia"></ion-input>
+    <ion-label>Km</ion-label>
+    <ion-item color="primary" slot="end">
+        <ion-icon name="airplane-outline"></ion-icon>
+    </ion-item>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tiempo:</ion-label>
+    <ion-label>{{tiempo}}</ion-label>
+    <ion-label color="danger" slot="end">MIN</ion-label>
+  </ion-item>
+  <ion-button expand="full" (click)="calcular(velocidad)" color="danger">Calcular</ion-button>
+</ion-content>

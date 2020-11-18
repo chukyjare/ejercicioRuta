@@ -8,8 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tab',
     pathMatch: 'full'
+  },
+  {
+    path: 'car',
+    loadChildren: () => import('./page/car/car.module').then( m => m.CarPageModule)
+  },
+  {
+    path: 'walk',
+    loadChildren: () => import('./page/walk/walk.module').then( m => m.WalkPageModule)
+  },
+  {
+    path: 'airplane',
+    loadChildren: () => import('./page/airplane/airplane.module').then( m => m.AirplanePageModule)
+  },
+  {
+    path: 'tab',
+    loadChildren: () => import('./page/tab/tab.module').then( m => m.TabPageModule)
   },
 ];
 
