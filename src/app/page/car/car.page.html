@@ -8,7 +8,8 @@
 <ion-content>
   <ion-item>
     <ion-label slot="start">Distancia en coche:</ion-label>
-    <ion-label>{{miDistancia}}</ion-label>
+    <!-- <ion-label>{{miDistancia}}</ion-label> -->
+    <ion-input [(ngModel)]="miDistancia"></ion-input>
     <ion-label>Km</ion-label>
     <ion-item color="primary" slot="end">
       <ion-icon name="car-outline"></ion-icon>
