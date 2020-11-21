@@ -1,3 +1,4 @@
+import { WalkPageModule } from './../walk/walk.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -10,15 +11,15 @@ const routes: Routes = [
     children: [
       {
         path:'walk',
-        loadChildren: './../../page/walk/walk.module#WalkPageModule'
+        loadChildren: () => import('./../../page/walk/walk.module').then( m => m.WalkPageModule)
       },
       {
         path:'car',
-        loadChildren: './../../page/car/car.module#CarPageModule'
+        loadChildren: () => import('./../../page/car/car.module').then( m => m.CarPageModule)
       },
       {
         path:'airplane',
-        loadChildren: './../../page/airplane/airplane.module#AirplanePageModule'
+        loadChildren: () => import('./../../page/airplane/airplane.module').then( m => m.AirplanePageModule)
       }
     ]
   
